@@ -1,21 +1,16 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
+import React from "react";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 
-const Footer: React.FC = () => (
-  <Box
-    component="footer"
-    sx={{
-      py: 2,
-      textAlign: 'center',
-      bgcolor: 'primary.main',
-      color: 'white',
-      mt: 'auto',
-    }}
-  >
-    <Typography variant="body2">
-      © {new Date().getFullYear()} My Portfolio. All rights reserved.
-    </Typography>
-  </Box>
-);
+const Footer: React.FC = () => {
+  return (
+    <AppBar position="static" color="primary">
+      <Toolbar sx={{ justifyContent: "center" }}>
+        <Typography variant="body2" color="inherit">
+          © {new Date().getFullYear()} Bobby Lim Yun Le. All rights reserved.
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export default Footer;

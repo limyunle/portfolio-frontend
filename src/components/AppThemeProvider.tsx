@@ -13,12 +13,16 @@ const theme = createTheme({
   colorSchemes: {
     light: {
       palette: {
-        // put your light overrides here (optional)
+        background: { paper: "#ffffff" }, // header/footer bg
+        text: { primary: "#000000" },    // text color
+        primary: { main: "#1976d2" },    // for buttons/links
       },
     },
     dark: {
       palette: {
-        // put your dark overrides here (optional)
+        background: { paper: "#121212" }, // header/footer bg
+        text: { primary: "#ffffff" },
+        primary: { main: "#90caf9" },
       },
     },
   },
