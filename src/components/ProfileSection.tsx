@@ -41,7 +41,7 @@ const ProfileSection: React.FC = () => {
           Bobby Lim Yun Le
         </Typography>
         <Typography variant="h6" color="text.secondary" gutterBottom>
-          Software Engineer | Backend (Java, Go) | Frontend (Angular, React) |Cloud (AWS, Azure)
+          Software Engineer | Backend (Java, Go) | Frontend (Angular, React) | Cloud (AWS, Azure)
         </Typography>
 
         <Stack
