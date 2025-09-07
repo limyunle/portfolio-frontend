@@ -1,23 +1,42 @@
-import React from 'react';
-import { Container, Grid, Paper, Typography } from '@mui/material';
+import React from "react";
+import { Container, Typography, Box } from "@mui/material";
+import ProfileSection from "./ProfileSection";
 
-const MainContent: React.FC = () => (
-  <Container sx={{ mt: 4, mb: 4 }}>
-    <Grid container spacing={4}>
-      <Grid size={{ xs: 12, md: 6}}>
-        <Paper sx={{ p: 2 }}>
-          <Typography variant="h6">GitHub Dashboard</Typography>
-          <Typography variant="body2">Placeholder for GitHub projects</Typography>
-        </Paper>
-      </Grid>
-      <Grid size={{ xs: 12, md: 6}}>
-        <Paper sx={{ p: 2 }}>
-          <Typography variant="h6">LeetCode Dashboard</Typography>
-          <Typography variant="body2">Placeholder for LeetCode stats</Typography>
-        </Paper>
-      </Grid>
-    </Grid>
-  </Container>
-);
+const MainContent: React.FC = () => {
+  return (
+    <Container maxWidth="lg" sx={{ py: 6 }}>
+      <Box id="profile" sx={{ mb: 8 }}>
+        <ProfileSection />
+      </Box>
+
+      <Box id="github" sx={{ mb: 8 }}>
+        <Typography variant="h4" gutterBottom>
+          GitHub Stats
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          🚧 Coming soon: interactive stats from your GitHub commits, repos, and contributions.
+        </Typography>
+      </Box>
+
+      <Box id="leetcode" sx={{ mb: 8 }}>
+        <Typography variant="h4" gutterBottom>
+          LeetCode Progress
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          🚧 Coming soon: your solved problems count, heatmap, and ranking updates.
+        </Typography>
+      </Box>
+
+      <Box id="projects" sx={{ mb: 8 }}>
+        <Typography variant="h4" gutterBottom>
+          Projects Showcase
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          🚧 Coming soon: highlight key projects with screenshots, links, and descriptions.
+        </Typography>
+      </Box>
+    </Container>
+  );
+};
 
 export default MainContent;
