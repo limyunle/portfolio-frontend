@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Typography, Box } from "@mui/material";
 import ProfileSection from "./ProfileSection";
+import GitHubDashboard from "./GitHubDashboard";
 
 const MainContent: React.FC = () => {
   return (
@@ -11,11 +12,9 @@ const MainContent: React.FC = () => {
 
       <Box id="github" sx={{ mb: 8 }}>
         <Typography variant="h4" gutterBottom>
-          GitHub Stats
+          GitHub Dashboard
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          🚧 Coming soon: interactive stats from your GitHub commits, repos, and contributions.
-        </Typography>
+        <GitHubDashboard />
       </Box>
 
       <Box id="leetcode" sx={{ mb: 8 }}>
