@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import MainContent from "./components/MainContent";
-import AppThemeProvider from "./components/AppThemeProvider";
+import Header from "./components/pages/Header";
+import Footer from "./components/pages/Footer";
+import MainContent from "./components/pages/MainContent";
+import AppThemeProvider from "./components/pages/AppThemeProvider";
 
 const App: React.FC = () => {
   return (
