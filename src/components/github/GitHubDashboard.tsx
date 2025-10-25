@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchRepos, Repo } from "../../services/githubService";
+import { fetchRepos, Repo } from "../../services/aggregateService";
 import {
   Box,
   Card,
