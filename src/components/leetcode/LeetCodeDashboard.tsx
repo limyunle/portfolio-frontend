@@ -6,13 +6,14 @@ import {
   Typography,
   Stack,
 } from "@mui/material";
-import { fetchLeetCodeStats } from "../../services/leetcodeService";
+import { fetchLeetCodeStats } from "../../services/aggregateService";
 import { DifficultyChart } from "./DifficultyChart";
 import { SubmissionCalendar } from "./SubmissionCalendar";
 
 const LeetCodeDashboard: React.FC = () => {
   const [stats, setStats] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchLeetCodeStats()
@@ -20,27 +21,14 @@ const LeetCodeDashboard: React.FC = () => {
         setStats(data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.error("Error fetching LeetCode stats:", error);
+      .catch((err) => {
+        setError(err.message);
         setLoading(false);
       });
   }, []);
-
-  if (loading) {
-    return (
-      <Stack alignItems="center" justifyContent="center" sx={{ mt: 6 }}>
-        <CircularProgress />
-      </Stack>
-    );
-  }
-
-  if (!stats) {
-    return (
-      <Typography color="error" align="center" sx={{ mt: 4 }}>
-        Failed to load LeetCode stats.
-      </Typography>
-    );
-  }
+  
+  if (loading) return <CircularProgress />;
+  if (error) return <Typography color="error">{error}</Typography>;
 
   return (
     <Stack spacing={4} alignItems="center" sx={{ mt: 4 }}>
