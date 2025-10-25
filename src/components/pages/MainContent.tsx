@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Typography, Box } from "@mui/material";
-import ProfileSection from "./ProfileSection";
-import GitHubDashboard from "./GitHubDashboard";
+import ProfileSection from "../ProfileSection";
+import GitHubDashboard from "../github/GitHubDashboard";
+import LeetCodeDashboard from "../leetcode/LeetCodeDashboard";
 
 const MainContent: React.FC = () => {
   return (
@@ -21,9 +22,7 @@ const MainContent: React.FC = () => {
         <Typography variant="h4" gutterBottom>
           LeetCode Progress
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          🚧 Coming soon: your solved problems count, heatmap, and ranking updates.
-        </Typography>
+        <LeetCodeDashboard />
       </Box>
 
       <Box id="projects" sx={{ mb: 8 }}>
