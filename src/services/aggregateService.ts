@@ -26,7 +26,7 @@ export async function fetchAggregateStats(): Promise<CombinedStats> {
   const now = Date.now();
 
   // use cache
-  if (cachedData && lastFetchTime && now - lastFetchTime < Number(config.AGGREGATE_CACHE_TTL)) {
+  if (cachedData && lastFetchTime && now - lastFetchTime < Number(config.AGGREGATE_CACHE_TTL_MS)) {
     return cachedData;
   }
 
