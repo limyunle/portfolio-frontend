@@ -30,7 +30,7 @@ const MainContent: React.FC = () => {
           Projects Showcase
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          🚧 Coming soon: highlight key projects with screenshots, links, and descriptions.
+          🚧 Coming soon, work in progress 🚧
         </Typography>
       </Box>
     </Container>
