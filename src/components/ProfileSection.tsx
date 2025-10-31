@@ -45,11 +45,11 @@ const ProfileSection: React.FC = () => {
         </Typography>
 
         <Stack
-          direction="row"
-          spacing={3}
+          direction={{ xs: "column", sm: "row" }}
+          spacing={2}
           justifyContent="center"
           alignItems="center"
-          sx={{ mt: 2 }}
+          sx={{ mt: 2, flexWrap: "wrap", rowGap: 1 }}
         >
           <Stack direction="row" spacing={1} alignItems="center">
             <EmailIcon fontSize="small" />
