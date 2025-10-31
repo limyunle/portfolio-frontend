@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, Button, Box } from "@mui/material";
+import ColorSchemeToggle from "./ColorSchemeToggle"; 
 
 const navItems = [
   { label: "Home", id: "home" },
@@ -22,8 +23,8 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 3; 
-      
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+
       let current = "home";
       for (const item of navItems) {
         const section = document.getElementById(item.id);
@@ -44,8 +45,12 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <AppBar position="fixed" color="primary" sx={{ zIndex: 1200 }}>
-      <Toolbar sx={{ display: "flex", justifyContent: "flex-start" }}>
+    <AppBar
+      position="fixed"
+      color="primary"
+      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+    >
+      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box sx={{ display: "flex" }}>
           {navItems.map((item) => (
             <Button
@@ -62,6 +67,10 @@ const Header: React.FC = () => {
               {item.label}
             </Button>
           ))}
+        </Box>
+
+        <Box>
+          <ColorSchemeToggle />
         </Box>
       </Toolbar>
     </AppBar>
