@@ -4,28 +4,58 @@ import ProfileSection from "../ProfileSection";
 import GitHubDashboard from "../github/GitHubDashboard";
 import LeetCodeDashboard from "../leetcode/LeetCodeDashboard";
 
+const HEADER_HEIGHT = 80;
+
 const MainContent: React.FC = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
-      <Box id="profile" sx={{ mb: 8 }}>
+      <Box
+        id="home"
+        sx={{
+          mb: 8,
+          pt: `${HEADER_HEIGHT}px`, 
+          mt: `-${HEADER_HEIGHT}px`, 
+        }}
+      >
         <ProfileSection />
       </Box>
 
-      <Box id="github" sx={{ mb: 8 }}>
+      <Box
+        id="github-stats"
+        sx={{
+          mb: 8,
+          pt: `${HEADER_HEIGHT}px`,
+          mt: `-${HEADER_HEIGHT}px`,
+        }}
+      >
         <Typography variant="h4" gutterBottom>
           GitHub Dashboard
         </Typography>
         <GitHubDashboard />
       </Box>
 
-      <Box id="leetcode" sx={{ mb: 8 }}>
+      <Box
+        id="leetcode-stats"
+        sx={{
+          mb: 8,
+          pt: `${HEADER_HEIGHT}px`,
+          mt: `-${HEADER_HEIGHT}px`,
+        }}
+      >
         <Typography variant="h4" gutterBottom>
           LeetCode Progress
         </Typography>
         <LeetCodeDashboard />
       </Box>
 
-      <Box id="projects" sx={{ mb: 8 }}>
+      <Box
+        id="projects"
+        sx={{
+          mb: 8,
+          pt: `${HEADER_HEIGHT}px`,
+          mt: `-${HEADER_HEIGHT}px`,
+        }}
+      >
         <Typography variant="h4" gutterBottom>
           Projects Showcase
         </Typography>
