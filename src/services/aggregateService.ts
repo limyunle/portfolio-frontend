@@ -47,6 +47,7 @@ export async function fetchAggregateStats(): Promise<CombinedStats> {
     }
 
     const combinedData = data as CombinedStats;
+    console.log("combinedData: " + JSON.stringify(combinedData));
     cachedData = combinedData;
     lastFetchTime = now;
 
@@ -69,8 +70,6 @@ export async function fetchRepos(): Promise<Repo[]> {
 
 export async function fetchLeetCodeStats(): Promise<LeetCodeStats> {
   const data = await fetchAggregateStats();
-
-
 
   const stats = data.leetcodeStats;
   if (!stats || typeof stats !== "object" || typeof stats.totalSolved !== "number") {

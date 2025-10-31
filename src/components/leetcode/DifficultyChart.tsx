@@ -19,7 +19,6 @@ export const DifficultyChart: React.FC<DifficultyChartProps> = ({ easy, medium, 
     { name: "Hard", value: hard },
   ];
 
-  // Adjusted for dark/light mode
   const COLORS =
     theme.palette.mode === "dark"
       ? ["#3FB950", "#F1E05A", "#EC6D71"]
