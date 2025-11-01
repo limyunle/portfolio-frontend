@@ -20,13 +20,13 @@ It’s a single-page application (SPA) built with **React + TypeScript**, displa
 
 ## 🏗️ Tech Stack
 
-| Layer           | Technology                     |
-| --------------- | ------------------------------ |
-| **Framework**   | React                          |
-| **Language**    | TypeScript                     |
-| **Styling**     | CSS / Tailwind (if applicable) |
-| **Deployment**  | GitHub Pages                   |
-| **Backend API** | AWS API Gateway (Go Lambda)    |
+| Layer           | Technology                  |
+| --------------- | --------------------------- |
+| **Framework**   | React                       |
+| **Language**    | TypeScript                  |
+| **Styling**     | Material UI                 |
+| **Deployment**  | GitHub Pages                |
+| **Backend API** | AWS API Gateway (Go Lambda) |
 
 ---
 
