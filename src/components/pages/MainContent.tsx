@@ -3,6 +3,7 @@ import { Container, Typography, Box } from "@mui/material";
 import ProfileSection from "../ProfileSection";
 import GitHubDashboard from "../github/GitHubDashboard";
 import LeetCodeDashboard from "../leetcode/LeetCodeDashboard";
+import ProjectShowcase from "../projects/ProjectShowcase";
 
 const HEADER_HEIGHT = 80;
 
@@ -18,6 +19,20 @@ const MainContent: React.FC = () => {
         }}
       >
         <ProfileSection />
+      </Box>
+
+      <Box
+        id="projects"
+        sx={{
+          mb: 8,
+          pt: `${HEADER_HEIGHT}px`,
+          mt: `-${HEADER_HEIGHT}px`,
+        }}
+      >
+        <Typography variant="h4" gutterBottom>
+          Projects Showcase
+        </Typography>
+        <ProjectShowcase />
       </Box>
 
       <Box
@@ -46,22 +61,6 @@ const MainContent: React.FC = () => {
           LeetCode Progress
         </Typography>
         <LeetCodeDashboard />
-      </Box>
-
-      <Box
-        id="projects"
-        sx={{
-          mb: 8,
-          pt: `${HEADER_HEIGHT}px`,
-          mt: `-${HEADER_HEIGHT}px`,
-        }}
-      >
-        <Typography variant="h4" gutterBottom>
-          Projects Showcase
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          🚧 Coming soon, work in progress 🚧
-        </Typography>
       </Box>
     </Container>
   );
