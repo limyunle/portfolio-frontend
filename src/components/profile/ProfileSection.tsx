@@ -91,7 +91,6 @@ const ProfileSection: React.FC = () => {
         </Button>
       </CardActions>
 
-      {/* Resume Preview Modal */}
       <Dialog
         open={openPreview}
         onClose={() => setOpenPreview(false)}

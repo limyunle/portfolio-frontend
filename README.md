@@ -1,24 +1,24 @@
-# 🌐 Personal Portfolio — Frontend (React + TypeScript)
+# Personal Portfolio — Frontend (React + TypeScript)
 
 This repository contains the **frontend** for my personal developer portfolio website.  
 It’s a single-page application (SPA) built with **React + TypeScript**, displaying my profile, projects, GitHub stats, and LeetCode progress.
 
-🚀 **Live Site:** [https://limyunle.github.io/portfolio-frontend/](https://limyunle.github.io/portfolio-frontend/)  
-🧠 **Backend Repo:** [Portfolio Backend (Go + AWS Lambda)](https://github.com/limyunle/portfolio-backend)
+**Live Site:** [https://limyunle.github.io/portfolio-frontend/](https://limyunle.github.io/portfolio-frontend/)  
+**Backend Repo:** [Portfolio Backend (Go + AWS Lambda)](https://github.com/limyunle/portfolio-backend)
 
 ---
 
-## ✨ Features
+## Features
 
-- 🧑‍💻 Personal profile and skills
-- 📊 Dynamic GitHub and LeetCode stats
-- 💼 Project showcase
-- ☁️ Data served via AWS Lambda backend
-- ⚡ Hosted statically on GitHub Pages
+- Personal profile and skills
+- Dynamic GitHub and LeetCode stats
+- Project showcase
+- Data served via AWS Lambda backend
+- Hosted statically on GitHub Pages
 
 ---
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 | Layer           | Technology                  |
 | --------------- | --------------------------- |
@@ -30,7 +30,7 @@ It’s a single-page application (SPA) built with **React + TypeScript**, displa
 
 ---
 
-## 🧠 Architecture Overview
+## Architecture Overview
 
 ```text
 Frontend (React + TS)
