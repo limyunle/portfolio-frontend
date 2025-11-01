@@ -1,10 +1,11 @@
 export const projectsData = [
   {
     title: "Personal Portfolio Website",
-    subtitle: "Full-stack Go + React portfolio, integrated with AWS services",
-    description:
-      "A full-stack personal portfolio built with Go (backend) and React (frontend), showcasing my projects, GitHub activity, and LeetCode stats. " 
-      + " The AWS services integrated are S3 for storing and retrieve data, Lambda Functions written in Go, EventBridge for cron trigger, API Gateway for triggering backend Lambda",
+    subtitle: "A serverless full-stack portfolio powered by React, Go, and AWS.",
+    description: 
+    `This portfolio showcases my projects, GitHub activity, and LeetCode stats. 
+    It is built with React and Go, using AWS Lambda for backend logic, API Gateway for routing, S3 for data storage, 
+    and EventBridge for automated updates.`,
     techStack: ["Go", "React", "TypeScript", "Material UI", "AWS"],
     image: "assets/portfolio_thumbnail.png",
     architecture: "assets/portfolio_architecture.png",
