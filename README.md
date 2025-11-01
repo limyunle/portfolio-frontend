@@ -40,4 +40,4 @@ AWS API Gateway → Lambda (Go)
 AWS S3 (aggregated stats)
 ```
 
-![alt text](Portfolio_Architecture.png)
+<img src="Portfolio_Architecture.png" alt="Architecture Diagram" style="width:100%; height:auto;">
