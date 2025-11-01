@@ -10,7 +10,7 @@ const MainContent: React.FC = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
       <Box
-        id="home"
+        id="profile"
         sx={{
           mb: 8,
           pt: `${HEADER_HEIGHT}px`, 
