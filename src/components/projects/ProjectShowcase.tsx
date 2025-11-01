@@ -18,9 +18,15 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const ProjectShowcase: React.FC = () => {
   return (
     <Box>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} justifyContent="center">
         {projectsData.map((project, index) => (
-          <Grid key={index} size={{ xs: 12, md: 6 }}>
+          <Grid 
+            key={index} 
+            size={{ xs: 12, md: 6 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",}}
+            >
             <Card
               sx={{
                 display: "flex",
@@ -37,10 +43,12 @@ const ProjectShowcase: React.FC = () => {
             >
               <CardMedia
                 component="img"
-                height="200"
                 image={project.image}
                 alt={project.title}
-                sx={{ objectFit: "cover" }}
+                sx={{
+                  height: { xs: 180, sm: 220, md: 260 },
+                  objectFit: "contain",
+                }}
               />
 
               <CardContent>

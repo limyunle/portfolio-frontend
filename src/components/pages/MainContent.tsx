@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Typography, Box } from "@mui/material";
-import ProfileSection from "../ProfileSection";
+import ProfileSection from "../profile/ProfileSection";
 import GitHubDashboard from "../github/GitHubDashboard";
 import LeetCodeDashboard from "../leetcode/LeetCodeDashboard";
 import ProjectShowcase from "../projects/ProjectShowcase";

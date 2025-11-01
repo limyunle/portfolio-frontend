@@ -16,7 +16,6 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import profilePicture from "../assets/profile_picture.jpg";
 
 const ProfileSection: React.FC = () => {
   const [openPreview, setOpenPreview] = useState(false);
@@ -33,7 +32,7 @@ const ProfileSection: React.FC = () => {
     >
       <Avatar
         alt="Bobby Lim Yun Le"
-        src={profilePicture}
+        src="assets/profile_picture.jpg"
         sx={{ width: 120, height: 120, mx: "auto", mb: 2 }}
       />
       <CardContent>
@@ -77,7 +76,7 @@ const ProfileSection: React.FC = () => {
           variant="contained"
           color="primary"
           startIcon={<DownloadIcon />}
-          href="/Bobby_Lim_Yun_Le_Resume.pdf"
+          href="assets/Bobby_Lim_Yun_Le_Resume.pdf"
           download
         >
           Download Resume
@@ -101,7 +100,7 @@ const ProfileSection: React.FC = () => {
       >
         <DialogContent sx={{ p: 0 }}>
           <iframe
-            src={`${process.env.PUBLIC_URL}/Bobby_Lim_Yun_Le_Resume.pdf`}
+            src={`${process.env.PUBLIC_URL}/assets/Bobby_Lim_Yun_Le_Resume.pdf`}
             width="100%"
             height="600px"
             style={{ border: "none" }}
