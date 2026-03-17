@@ -3,7 +3,7 @@ export const projectsData = [
     title: "Personal Portfolio Website",
     subtitle: "A serverless full-stack portfolio powered by React, Go, and AWS.",
     description: 
-    `This portfolio showcases my projects, GitHub activity, and LeetCode stats. 
+    `This portfolio showcases my projects and GitHub activity. 
     It is built with React and Go, using AWS Lambda for backend logic, API Gateway for routing, S3 for data storage, 
     and EventBridge for automated updates.`,
     techStack: ["Go", "React", "TypeScript", "AWS", "Material UI"],

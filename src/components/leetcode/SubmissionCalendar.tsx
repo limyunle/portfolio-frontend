@@ -1,18 +1,38 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import { Box, Tooltip } from "@mui/material";
+import { Box, Tooltip, Typography } from "@mui/material";
 
 interface SubmissionCalendarProps {
-  data: { [timestamp: string]: number };
+  data?: { [timestamp: string]: number } | null;
 }
 
 export const SubmissionCalendar: React.FC<SubmissionCalendarProps> = ({ data }) => {
   const theme = useTheme();
+  const safeData = data ?? {};
+  const dayKeys = Object.keys(safeData);
 
-  const days = Object.keys(data)
+  if (dayKeys.length === 0) {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: 160,
+          p: 2,
+        }}
+      >
+        <Typography variant="body2" color="text.secondary">
+          No submissions yet.
+        </Typography>
+      </Box>
+    );
+  }
+
+  const days = dayKeys
     .map((ts) => ({
       date: new Date(parseInt(ts) * 1000),
-      count: data[ts],
+      count: safeData[ts],
     }))
     .sort((a, b) => a.date.getTime() - b.date.getTime());
 
