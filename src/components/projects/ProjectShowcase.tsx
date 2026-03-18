@@ -18,20 +18,22 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const ProjectShowcase: React.FC = () => {
   return (
     <Box>
-      <Grid container spacing={4} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center" alignItems="stretch">
         {projectsData.map((project, index) => (
-          <Grid 
-            key={index} 
+          <Grid
+            key={index}
             size={{ xs: 12, md: 6 }}
             sx={{
               display: "flex",
-              justifyContent: "center",}}
-            >
+              alignSelf: "stretch",
+            }}
+          >
             <Card
               sx={{
                 display: "flex",
                 flexDirection: "column",
                 height: "100%",
+                flex: 1,
                 borderRadius: 4,
                 boxShadow: 4,
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -51,7 +53,13 @@ const ProjectShowcase: React.FC = () => {
                 }}
               />
 
-              <CardContent>
+              <CardContent
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  flexGrow: 1,
+                }}
+              >
                 <Stack
                   direction="row"
                   spacing={1}
@@ -73,46 +81,52 @@ const ProjectShowcase: React.FC = () => {
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                   {project.description}
                 </Typography>
+                <Box sx={{ flexGrow: 1 }} />
 
-                <Stack direction="row" spacing={1} flexWrap="wrap">
-                  {project.techStack.map((tech) => (
-                    <Chip
-                      key={tech}
-                      label={tech}
-                      variant="outlined"
-                      color="primary"
-                      size="small"
-                    />
-                  ))}
-                </Stack>
+                <Box>
+                  <Stack direction="row" spacing={1} flexWrap="wrap">
+                    {project.techStack.map((tech) => (
+                      <Chip
+                        key={tech}
+                        label={tech}
+                        variant="outlined"
+                        color="primary"
+                        size="small"
+                      />
+                    ))}
+                  </Stack>
+
+                  <CardActions
+                    disableSpacing
+                    sx={{ px: 0, pb: 0, pt: 2, gap: 1, flexWrap: "wrap" }}
+                  >
+                    {project.liveDemo && (
+                      <Button
+                        size="small"
+                        variant="contained"
+                        color="primary"
+                        endIcon={<LaunchIcon />}
+                        href={project.liveDemo}
+                        target="_blank"
+                      >
+                        Live Demo
+                      </Button>
+                    )}
+                    {project.githubLinks.map((link, i) => (
+                      <Button
+                        key={i}
+                        size="small"
+                        variant="outlined"
+                        startIcon={<GitHubIcon />}
+                        href={link.url}
+                        target="_blank"
+                      >
+                        {link.label}
+                      </Button>
+                    ))}
+                  </CardActions>
+                </Box>
               </CardContent>
-
-              <CardActions sx={{ mt: "auto", px: 2, pb: 2 }}>
-                {project.liveDemo && (
-                  <Button
-                    size="small"
-                    variant="contained"
-                    color="primary"
-                    endIcon={<LaunchIcon />}
-                    href={project.liveDemo}
-                    target="_blank"
-                  >
-                    Live Demo
-                  </Button>
-                )}
-                {project.githubLinks.map((link, i) => (
-                  <Button
-                    key={i}
-                    size="small"
-                    variant="outlined"
-                    startIcon={<GitHubIcon />}
-                    href={link.url}
-                    target="_blank"
-                  >
-                    {link.label}
-                  </Button>
-                ))}
-              </CardActions>
             </Card>
           </Grid>
         ))}
