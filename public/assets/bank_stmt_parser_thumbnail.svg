@@ -1,0 +1,44 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1A2B"/>
+      <stop offset="1" stop-color="#113A4D"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#E5EDF8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <circle cx="1020" cy="120" r="180" fill="#1F7A8C" opacity="0.25"/>
+  <circle cx="160" cy="580" r="220" fill="#56CFE1" opacity="0.18"/>
+
+  <rect x="120" y="90" width="960" height="520" rx="28" fill="#0E2438" stroke="#2E5E7A" stroke-width="2"/>
+
+  <rect x="170" y="150" width="430" height="400" rx="16" fill="url(#panel)"/>
+  <rect x="200" y="195" width="190" height="20" rx="10" fill="#B7C9E2"/>
+  <rect x="200" y="230" width="360" height="10" rx="5" fill="#D2DDEC"/>
+  <rect x="200" y="250" width="320" height="10" rx="5" fill="#D2DDEC"/>
+  <rect x="200" y="270" width="340" height="10" rx="5" fill="#D2DDEC"/>
+
+  <rect x="200" y="320" width="110" height="24" rx="6" fill="#DEE7F3"/>
+  <rect x="330" y="320" width="160" height="24" rx="6" fill="#DEE7F3"/>
+  <rect x="200" y="356" width="290" height="10" rx="5" fill="#C9D9EC"/>
+  <rect x="200" y="374" width="300" height="10" rx="5" fill="#C9D9EC"/>
+  <rect x="200" y="392" width="270" height="10" rx="5" fill="#C9D9EC"/>
+
+  <rect x="650" y="170" width="380" height="120" rx="16" fill="#112C45" stroke="#2F5A7A"/>
+  <text x="680" y="222" fill="#C9E7FF" font-size="34" font-family="Arial, sans-serif" font-weight="700">PDF Extractor</text>
+  <text x="680" y="258" fill="#7EB7DE" font-size="22" font-family="Arial, sans-serif">pdfcpu pipeline</text>
+
+  <path d="M610 250C630 250 640 250 660 250" stroke="#7CD4FF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M646 238L668 250L646 262" stroke="#7CD4FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="650" y="330" width="380" height="170" rx="16" fill="#0B2238" stroke="#2F5A7A"/>
+  <text x="680" y="388" fill="#D9F3FF" font-size="36" font-family="Arial, sans-serif" font-weight="700">NVIDIA NIM</text>
+  <text x="680" y="426" fill="#8CCAE8" font-size="22" font-family="Arial, sans-serif">LLM transaction summary</text>
+  <text x="680" y="456" fill="#8CCAE8" font-size="22" font-family="Arial, sans-serif">and categorisation</text>
+
+  <rect x="120" y="90" width="960" height="520" rx="28" stroke="#5DB4D0" stroke-opacity="0.35"/>
+</svg>

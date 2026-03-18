@@ -52,9 +52,21 @@ const ProjectShowcase: React.FC = () => {
               />
 
               <CardContent>
-                <Typography variant="h5" gutterBottom>
-                  {project.title}
-                </Typography>
+                <Stack
+                  direction="row"
+                  spacing={1}
+                  alignItems="center"
+                  sx={{ mb: 1, flexWrap: "wrap" }}
+                >
+                  <Typography variant="h5">{project.title}</Typography>
+                  {project.status && (
+                    <Chip
+                      label={project.status}
+                      color={project.status === "In Progress" ? "warning" : "success"}
+                      size="small"
+                    />
+                  )}
+                </Stack>
                 <Typography variant="subtitle1" color="text.secondary" gutterBottom>
                   {project.subtitle}
                 </Typography>
