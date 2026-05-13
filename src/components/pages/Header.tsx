@@ -18,7 +18,7 @@ import ColorSchemeToggle from "./ColorSchemeToggle";
 const navItems = [
   { label: "Profile", id: "profile" },
   { label: "Projects", id: "projects" },
-  { label: "GitHub Stats", id: "github-stats" },
+  { label: "GitHub Dashboard", id: "github-stats" },
 ];
 
 const Header: React.FC = () => {
