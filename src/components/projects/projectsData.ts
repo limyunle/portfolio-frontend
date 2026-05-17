@@ -17,10 +17,10 @@ export const projectsData = [
   },
   {
     title: "Bank Statement Parser",
-    status: "In Progress",
+    status: "On Hold",
     subtitle:
       "A serverless parser that extracts bank-statement PDFs and summarizes transactions with an LLM.",
-    description: `This project is currently in progress. The backend uses a PDF extraction pipeline powered by pdfcpu, then sends the extracted statement text to NVIDIA NIM for transaction categorisation and summary generation.
+    description: `The backend uses a PDF extraction pipeline powered by pdfcpu, then sends the extracted statement text to NVIDIA NIM for transaction categorisation and summary generation.
     A lightweight React frontend supports multi-file uploads and visualises monthly credit/debit breakdowns.`,
     techStack: ["Go", "Gin", "React", "pdfcpu", "NVIDIA NIM API", "AWS Lambda"],
     image: "assets/bank_stmt_parser_thumbnail.svg",
